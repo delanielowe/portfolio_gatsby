@@ -65,7 +65,7 @@ const Name = styled.h2`
   margin-top: 0;
 `
 
-const Card = ({ path, cover, date, areas, title, delay }) => {
+const Card = ({ path, cover, areas, title, delay }) => {
   const springProps = useSpring({
     config: config.slow,
     delay: 200 * delay,
@@ -82,7 +82,6 @@ const Card = ({ path, cover, date, areas, title, delay }) => {
         <Content>
           <Name>{title}</Name>
           <Bottom>
-            <div>{date}</div>
             <div>
               {areas.map((area, index) => (
                 <React.Fragment key={area}>
